@@ -1,0 +1,69 @@
+Core Concepts of Elections
+PVS DSL 13 May 2015.
+Concepts
+Nouns, Verbs, Adjectives, Adverbs
+Propositions
+WA Initiative 872: Blanket Primary
+Washington Initiative 872 (WA’s top-two blanket primary).
+
+Which Joe describes as: ...just interesting enough to be non-trivial and is becoming more widely discussed, if not adopted, over time. http://en.wikipedia.org/wiki/Washington_Initiative_872
+
+The focus of activity this week will be highlighting the document and capturing a sketch of the more precise characterization “live" in PVS. PVS is one of the other tools previously mentioned in presentation, developed at SRI. See http://pvs.csl.sri.com/
+
+This measure proposes a new system for conducting primaries for partisan offices.
+
+    primary
+    office
+        partisan
+
+This proposal continues current practice of permitting voters to vote for any candidate for any office in primary and general elections, without limitation based on party.
+
+    voter
+    vote
+    candidate
+    general
+    election primary? xor general?
+    party
+
+The two "top" candidates with the most votes in the primary advance to the general election.
+
+    "topness"
+    max: votes
+
+    candidates have votes
+
+    contest (*)
+
+    contests have candidates
+
+    advance: contest -> "top two"
+    most_votes: contest -> candidate
+
+Candidates continue to designate their party.
+
+    a candidate party? or SET of party? (but my suspicion is that a candidate has zero or more parties)
+
+It becomes effective only if the court decision invalidating the traditional blanket primary becomes final.
+
+Ballot (29A.04.008)
+
+something formal here % 29A.04.008 (1)(a)
+RCV in MN.
+
+This is an example from Herb's list, from Minnesota on RCV varieties.
+
+I believe that the varieties across more than one local jurisdiction in MN will be interesting to explore in terms of what it takes to model a certain class of methods, and also practical issues such as reuse of model components at some level of generality versus specificity, and other factors. I've attached a copy of the examples that Herb contributed (posted previously) for handy reference as .doc in case you wish to add your own notes and also .pdf.
+
+Sampling of the extensive references available for the Minneapolis, MN example: http://vote.minneapolismn.gov/sitemap/index.htm
+
+Code Ordinances Related To Elections: http://vote.minneapolismn.gov/www/groups/public/@clerk/documents/webcontent/wcms1p-116203.pdf
+
+Reference Chart - Ordinance Changes, with Definitions, also illustrates examples of changes in legal text over time
+
+http://vote.minneapolismn.gov/www/groups/public/@clerk/documents/webcontent/wcms1p-108607.pdf
+
+An Analysis of multiple aspects of Elections including EA, but contains interesting information and diagrams for the in-use RCV as well as some references to issues faced and changes recommended to legislative definitions, as pertinent to mathematical modeling of counting, tabulation and mathematical evaluation.
+
+http://vote.minneapolismn.gov/www/groups/public/@clerk/documents/webcontent/wcms1p-127166.pdf
+
+E.g.: AMEND THE PROCESS OF MATHEMATICAL ELIMINATION In Ranked-Choice Voting, mathematical elimination of a candidate is the process of comparing a candidate’s potential vote total to the actual vote total of the candidate with the next greater number of votes. This process is carried out in each round and determines if it is possible for multiple candidates to be defeated in a single round. The current ordinance specifies the potential vote total of a candidate in such a way that does not take advantage of all the ballot information available from the voting equipment; the language still reflects the manual process from 2009 that addressed a full hand-count of actual ballots. In an RCV hand count, a vote is assigned to each ballot’s first-choice candidate. Lower rankings on a ballot are examined only if the first choice candidate is defeated. Using the new voting equipment and the exportable Cast Vote Record (CVR) data file, it is possible to more thoroughly examine the full range of voter preferences on all ballots. The table on the next page provides an example of how the process works under the language of the existing RCV ordinance. Page 33
