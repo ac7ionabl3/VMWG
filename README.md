@@ -1,15 +1,14 @@
 # VMWG
-NIST-EAC Voting Models Public Working Group Repository
+NIST-EAC Voting Models Public WG : This is our WG Draft/WIP/staging repo. 
+See official repository at: https://github.com/usnistgov/Voting
 
-
-
-    WG Chair : L. Massa-Lochridge | lauren.massa.lochridge.sf@gmail.com 415-735-1873
+    WG Chair : L. Massa-Lochridge 
         WG Chair & Executive or Administrative matters
 
-    Co-Chair : John Wack (NIST) | (preferred email?)
+    Co-Chair : John P. Wack (NIST)
         WG Chair & Executive matters
 
-    Committee Chair on Auditability & Risk Management : Philp B. Stark | (preferred email?)
+    Committee Chair on Auditability & Risk Management : Philp B. Stark 
         Committee Chair & Committee Executive matters
 
 Contact WG: voting-methods@nist.gov
